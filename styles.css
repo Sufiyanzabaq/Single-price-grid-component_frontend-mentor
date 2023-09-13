@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+:root{
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+p{
+    line-height: 1.7;
+}
+.community{
+    /* background-color: var(--Light-Gray); */
+    background-color: white;
+    grid-column: span 2;
+    padding: 30px;
+}
+.community h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Cyan);
+    margin-bottom: 10px;
+}
+.community h2{
+    color: var(--Bright-Yellow);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.community p{
+    color: grey;
+}
+.subscription{
+    background-color: hsl(179, 74%, 38%);
+    color: var(--Light-Gray);
+    padding: 20px 30px;
+}
+.subscription h1{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.subscription h2{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.subscription span{
+    color: rgb(187, 184, 184);
+    font-size: 16px;
+    font-weight: 400;
+}
+.subscription button{
+    padding: 10px;
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    font-weight: 700;
+    border-radius: 5px;
+}
+.about{
+    background-color: var(--Cyan);
+    color: var(--Light-Gray);
+    padding: 20px 30px;
+}
+.about h1{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.about p{
+    font-size: 13px;
+    color: rgb(187, 184, 184);
+}
+
+@media (max-width: 600px){
+    .body{
+        height: 100%;
+    }
+    /* .container{
+        width: 90%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    } */
+    /* .community{
+        grid-column: span 1;
+    } */
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%
+    }
+}
